@@ -1,8 +1,9 @@
-var canvasWidth = 600;
-var canvasHeight = 400;
+// game canvas(play area)
+var canvasWidth = 400;
+var canvasHeight = 800;
 
 function startGame() {
-    gamesCanvsa.start();
+    gamesCanvas.start();
 }
 
 var gameCanvas = {
@@ -15,20 +16,31 @@ var gameCanvas = {
     }
 }
 
-var player;
-var playerYPosition = 200;
-
 function startGame() {
     gameCanvas.start();
-    player = new createPlayer(30, 30, 10);
+    
+}
+// player build and position
+function newImage(url, left, bottom){
+    let object = document.createElement('img')
+    object.src = url
+    object.style.position = 'fixed'
+    object.style.left = left + 'px'
+    object.style.bottom = bottom + 'px'
+    document.body.append(object)
+    return object
+}
+function newItem(url, left, bottom){
+    let object = newImage(url, left, bottom)
+
+    object.addEventListener('dblclick', () => {
+        object.remove()
+    })
 }
 
-function createPlayer(width, height, x) {
-    this.width = width;
-    this.height = height;
-    this.x = x;
-    this.y = playerYPosition;
-    ctx = gameCanvas.context;
-    ctx.fillStyle = "green";
-    ctx.fillRect(this.x, this.y, this.width, this.height);
+newImage('assets/gamecar.png', 20, 170)
+
+
+function moveRight() {
+
 }

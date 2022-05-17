@@ -1,12 +1,3 @@
-canvas {
-    background-image: url(/assets/pixil-frame-0.png);
-    border: 3px solid black;
-}
-.vertical-line {
-    display: inline-block;
-    border-left: 1px solid black;
-    margin: 0 10px;
-    height: 125px;
-}
+
 
 

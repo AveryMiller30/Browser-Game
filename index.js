@@ -33,5 +33,40 @@ var t = setInterval(updateCars, 1000);
    return newRow
 }
 
+// When user presses -> or <-, move our car (-1) to the respectul direction.
+//  From https://stackoverflow.com/questions/5597060/detecting-arrow-key-presses-in-javascript
+// This code is used to detect when the left and right arrow keys have been pressed
+function findKeypress(carGrid) {
+    document.onkeydown = function (event) {
+        switch (event.keyCode) {
+           case 37:
+              carGrid[carGrid.length - 1] = moveCar(carGrid, -1)
+              console.log(carGrid)
+              break;
+           case 39:
+              carGrid[carGrid.length - 1] = moveCar(carGrid, 1)
+              console.log(carGrid)
+              break;
+        }
+     };
+  }
+  
+  function moveCar(carGrid, movement) {
+    let playerRow = carGrid[carGrid.length - 1]
+    let playerIndex = playerRow.indexOf(-1)
+  
+    if (movement == 1 && playerIndex != playerRow.length - 1) {
+      playerRow[playerIndex + 1] = -1;
+      playerRow[playerIndex] = 0;
+    }
+  
+    if (movement == -1 && playerIndex != 0) {
+        playerRow[playerIndex - 1] = -1;
+        playerRow[playerIndex] = 0;
+    }
+  
+    return playerRow;
+  }
+
 
 

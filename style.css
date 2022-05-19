@@ -1,6 +1,32 @@
-html, body {
-    height: 100%;
-    width: 100%;
-  }
+.container {
+  margin: auto;
+  width: 20%;
+  min-width: 300px;
+  height: 50%;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-evenly;
+}
 
+.road {
+  width: 23%;
+  height: 130px;
+  background-color: gray;
+  border-left: dashed;
+  border-right: dashed;
+  border-color: yellow;
+}
+
+.user {
+/*   https://www.w3schools.com/cssref/pr_background-position.asp */
+  background-image: url("assets/playerCar.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.enemy {
+  background-image: url("assets/obstacle.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
 

@@ -30,7 +30,8 @@ function playGame() {
 
         // If collision, end game
         if (temp[index][playerIndex] === 1) {
-          // https://www.w3schools.com/jsref/prop_style_visibility.asp
+          // From https://www.w3schools.com/jsref/prop_style_visibility.asp
+          // Keeps the game-over form displaying until collision is detected
           let el = document.getElementById("game-over").style.visibility = "visible";
           clearInterval(game);
         } else {
@@ -52,7 +53,9 @@ function playGame() {
     let newRow = [];
     let count = 0;
     for (let i = 0; i < length; i++) {
-      // https://stackoverflow.com/questions/36756331/js-generate-random-boolean
+      
+      // From https://stackoverflow.com/questions/36756331/js-generate-random-boolean
+      // Generates the random series of 1s and 0s for the new array
       let rand = Math.round(Math.random())
       // As long as we don't already have 3 new cars, keep seeing if we add more
       if (rand === 1 && count === 3) {
@@ -69,7 +72,7 @@ function playGame() {
   
   // Check for left and right arrow input
   //  From https://stackoverflow.com/questions/5597060/detecting-arrow-key-presses-in-javascript
-// This code is used to detect when the left and right arrow keys have been pressed
+  // This code is used to detect when the left and right arrow keys have been pressed
   function findKeypress() {
     document.onkeydown = function (event) {
         switch (event.keyCode) {

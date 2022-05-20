@@ -14,7 +14,7 @@ function playGame() {
   findKeypress(carGrid);
   
   // Run updateCars every 1 second
-  var game = setInterval(updateCars, 1000);
+  var game = setInterval(updateCars, 500);
   
   // Updates the grid to move nested array elements down till collision is detected
   function updateCars() {

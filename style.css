@@ -38,7 +38,14 @@ h1 {
   font-family: "Courier New", Courier, monospace;
 }
 
-p {
+h3 {
+  color: yellow;
+  text-align: center;
+  text-decoration: underline;
+  font-family: "Courier New", Courier, monospace;
+}
+
+h4 {
   color: yellow;
   text-align: center;
   font-family: "Courier New", Courier, monospace;
@@ -48,11 +55,11 @@ p {
 
 
 #score {
-  padding-bottom: 0px;
   color: yellow;
   text-align: center;
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
+  font-size: x-large;
 }
 
 body {
@@ -63,4 +70,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+#play-again {
+  background-color: red; /* Green */
+  border: none;
+  border-radius: 50%;
+  color: white;
+  padding: 10px 32px;
 }
